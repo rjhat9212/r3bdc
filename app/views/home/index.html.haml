@@ -1,1 +1,5 @@
-%h3 Home
+%h1 Home - all users
+- @users.each do |u|
+  %p
+    User
+    = link_to u.name, u
