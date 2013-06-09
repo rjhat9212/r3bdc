@@ -68,7 +68,8 @@ pickle-email-*.html
 /nbproject/
 
 # RubyMine project files
-.idea
+# -- lets keep these for now - see what kind of trouble it creates
+#.idea
 
 # Textmate project files
 /*.tmproj
