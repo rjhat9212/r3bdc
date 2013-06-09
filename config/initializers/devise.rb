@@ -1,3 +1,7 @@
+require "omniauth-facebook"
+require "omniauth-google-oauth2"
+
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -221,6 +225,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  #config.omniauth :facebook, "345481132244370", "fd918c7f2e384a6e7cb78d6fa5e30648"
+  config.omniauth :google_oauth2, "206002392924.apps.googleusercontent.com", "eHOEquiob2XXXvxIRZZbSQZL"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

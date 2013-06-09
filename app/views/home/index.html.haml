@@ -2,4 +2,4 @@
 - @users.each do |u|
   %p
     User
-    = link_to u.name, u
+    = link_to "#{u.name} - #{(u.provider)?u.provider : "local"}", u
