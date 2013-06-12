@@ -1,3 +1,7 @@
 <component name="ProjectDictionaryState">
-  <dictionary name="joe" />
+  <dictionary name="joe">
+    <words>
+      <w>omniauth</w>
+    </words>
+  </dictionary>
 </component>
