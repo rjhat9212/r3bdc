@@ -12,7 +12,10 @@ module ApplicationHelper
   def wrap_results(results, opts={})
     result = {}
     result[:results] = (results.is_a? Array) ? results : [results]
-    result[:date_time] = Time.now
+    result[:results_available] = opts[:available] || result[:results].length
+    result[:results_count] = result[:results].length
+    result[:results_start] = opts[:start_idx] || 0
+    result[:response_time] = Time.now
     opts.each{|k,v| result[k] = v }
     result
   end
