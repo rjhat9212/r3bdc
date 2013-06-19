@@ -9,4 +9,11 @@ module ApplicationHelper
       HTML
       html.html_safe
   end
+  def wrap_results(results, opts={})
+    result = {}
+    result[:results] = (results.is_a? Array) ? results : [results]
+    result[:date_time] = Time.now
+    opts.each{|k,v| result[k] = v }
+    result
+  end
 end

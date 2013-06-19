@@ -18,6 +18,9 @@ R3bdc::Application.routes.draw do
     end
     namespace :v1 do
       resources :users , :defaults => { :format => 'json' }
+      resources :service_areas , :only => [:search], :defaults => { :format => 'json' } do
+        get 'search', :on => :collection
+      end
     end
   end
 end
